@@ -1,0 +1,215 @@
+<html>
+<head>
+  <title>Resume | Daniel Njoku</title>
+  <meta charset="UTF-8"><!--[if IE]><![endif]-->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Daniel Njoku | Software Engineer</title>
+  <meta property="og:title" content="Resume | Daniel Njoku" />
+  <meta name="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+  <meta name="keywords" content="engineer, software, development, web, dannjoku, daniel, njoku, javascript, go, python, sql, marist">
+  <meta itemprop="name" content="Resume | Daniel Njoku">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hey, I'm Daniel",
+      subtext: "Software Engineer based in the Greater New York City",
+      jobStatus: "Software Engineer",
+      twitterURL: 'https://twitter.com/dannjoku',
+      instaURL: 'https://www.instagram.com/dannjoku/',
+      githubURL: 'https://github.com/dannjoku1',
+      linkedinURL: 'https://www.linkedin.com/in/daniel-njoku',
+      resumeURL: 'http://dannjoku.com/resume.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              twitterURL={this.props.profileData.twitterURL}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href="mailto:dannjoku1@gmail.com" className="fa fa-google"></a>
+                  <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I am Software Engineer with 3+ year of experience in web applications development, website development, mobile application development on both Android & iOS devices, and database development.</p>
+                  <p className="intro-p">I enjoy being the bridge between front-end user interfaces and back-end solutions, which makes me feel right at home as a Software Engineer. I have experience developing and designing products for the web, from simple landing pages to full-fledged web apps.</p>
+                  <span className="intro-p job-pls">I&#39;m currently seeking opportunities to learn, while working with experienced individuals who are as passionate about learning as I am</span>
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>JavaScript (ES6), Python, HTML5, CSS3, Java, SQL, GO</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>React, Django, Flask, Node, Spring, Play!, Iris</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>AWS, Bash, Git &amp; Github, MongoDB, GraphQL, PostGres, MySQL, NoSQL, DB2</span>
+                  </div>
+                  <div className="skill-category">
+                      <strong>Design: &nbsp;</strong>
+                      <span>Figma, Sketch, InDesign, Lucid Charts, Wireframing, User Testing</span>
+                    </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.marist.edu/" target="_blank">Marist College</a></div>
+                  <div className="college"><a href="http://www.marist.edu/" target="_blank">School of Computer Science and Mathematics</a></div>
+                  <div className="major"><strong>Major:</strong> Computer Science</div>
+                  <div className="conc"><strong>Concentration</strong> Software Development</div>
+                  <div className="ath"><strong>Collegiate Athlete:</strong> Experienced playing four years of Division 1 football, while balancing a full course load.</div>
+                  <div className="grad-date">Graduated: May 2017</div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://ups.com/">United Parcel Service</a>
+                      <div className="duration">June 2017 &mdash; Present</div>
+                    </div>
+                    <div className="title">Systems Programming Analyst</div>
+                    <ul className="description">
+                      <li>Created, reviewed and implemented maintenance plans on development and production systems.</li>
+                      <li>Collaborate with team members, business partners and vendors to resolve internal/external issues with critical system applications.</li>
+                      <li>Researched database and performed queries to obtain specific employee-related data for various internal departments.</li>
+                      <li>Develop performance and metric reports that contribute to reliability, scalability, availability and capacity management.</li>
+                      <li>Maintain alignment of business continuity and disaster recovery plans.</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="http://dannjoku.com/" target="_blank">Freelancer</a>
+                      <div className="duration">January 2014 &mdash; Present</div>
+                    </div>
+                    <div className="title">Software Engineer</div>
+                    <ul className="description">
+                      <li>Composed apps using Raspberry Pi for various functions; from thermometers to motion sensored video cameras.</li>
+                      <li>Designed and developed small relational database for a small hospital managed by PostgreSQL.</li>
+                      <li>Created interactive video game emulated after Pacman, written in Java</li>
+                      <li>A compiler written in JavaScript, based on a simple context free grammar.</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                      <div className="job">
+                        <a className="company" href="https://ups.com/">United Parcel Service</a>
+                        <div className="duration">May 2016 &mdash; August 2016</div>
+                      </div>
+                      <div className="title">IT Summer Intern</div>
+                      <ul className="description">
+                        <li>Learned about different technologies by working with experienced engineers.</li>
+                        <li>Installed, upgraded, and maintained databases running in sandbox environment.</li>
+                        <li>Monitored and solved performance issues.</li>
+                        <li>Prepared Excel spreadsheets to aid in database maintenance.</li>
+                      </ul>
+                    </div>
+                    <div className="exp-item">
+                        <div className="job">
+                          <a className="company" href="http://marist.edu">Marist College</a>
+                          <div className="duration">May 2015 &mdash; May 2017</div>
+                        </div>
+                        <div className="title">Creative Technologist Co-op</div>
+                        <ul className="description">
+                          <li>Developed and maintained code for in-house and client websites primarily using HTML, CSS, and JavaScript.</li>
+                          <li>Provide technical support relating to TCP/IP and campus residential housing networks as well as campus wide wireless data network.</li>
+                          <li>Remediate software issues and perform hardware repairs on students and faculty owned devices.</li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="http://dannjoku.com/" target="_blank">dannjoku.com</a>
+                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title" href="https://github.com/dannjoku1/WeatherApp/" target="_blank">Weather Widget</div>
+                    <p className="project-desc">A simple weather app that I made with React.js, Node.js, and Vanilla JavaScript. I used the OpenWeatherMap API to get the current weather and forcast data displayed on this application.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/dannjoku1/AlgorithmDesign/" target="_blank">Algorithm Design</a>
+                    <p className="project-desc">A repository of algorithms and data structures written in Python and Java.</p>
+                  </div>
+                </div>
+              </div>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+</html>
